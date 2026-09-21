@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>VA-11-HALL-A</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
 </head>
-<body>
-    <header>
+<body class="crt">
+    <header id="inicio">
         <h1>VA-11-HALL-A</h1>
         <h5>UN SABOR DEL MÁS ALLÁ</h5>
         <nav>
             <ul>
                 <li><a href="#inicio">INICIO</a></li>
                 <li><a href="#personal">PERSONAL</a></li>
-                <li><a href="#contacto">CONTACTO</a></li>
+                <li><a href="#contacto">ALQUILER</a></li>
             </ul>
         </nav>
     </header>
@@ -50,40 +50,41 @@
         </div>
     </section>
     <hr>
-    <section class="contacto-flex">
+    <section id="contacto" class="contacto-flex">
         <div class="itemform item1">
-            <h3>¿Quiere poder disfrutar de alguna de nuestras bebidas? ¡Haga su pedido ahora!</h3>
+            <h3>¿Quieres el bar entero para ti? ¡Reserva el local para tu evento privado!</h3>
         </div>
         <div class="itemform item2">
             <form>
                 <div class="form-inline">
                     <div class="form-grupo">
-                        <label for="name">Nombre:</label>
-                        <input type="text" id="name" name="name">
+                        <label for="name">Nombre / Corporación:</label>
+                        <input type="text" id="name" name="name" required placeholder="Ej. Kira*Miki Fanclub">
                     </div>
                     <div class="form-grupo">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email">
+                        <label for="email">Email de contacto:</label>
+                        <input type="email" id="email" name="email" required placeholder="Para enviarte el presupuesto">
                     </div>
                 </div>
-                <label for="bebidas">Elige una bebida:</label>
-                <select id="bebidas" name="bebidas">
-                    <option value="bad-touch">Bad Touch</option>
-                    <option value="bleeding-jane">Bleeding Jane</option>
-                    <option value="brandtini">Brandtini</option>
-                    <option value="fluffy-dream">Fluffy Dream</option>
-                    <option value="pile-driver">Pile Driver</option>
-                    <option value="zen-star">Zen Star</option>
+                <label for="bebidas">Barra libre: Elige la bebida estrella de la noche:</label>
+                <select id="bebidas" name="bebidas" required>
+                    <option value="">-- Selecciona el catálogo para el evento --</option>
+                    <option value="bad-touch">Bad Touch (Gran ambiente)</option>
+                    <option value="bleeding-jane">Bleeding Jane (Fiesta sobria)</option>
+                    <option value="brandtini">Brandtini (Gala elegante)</option>
+                    <option value="fluffy-dream">Fluffy Dream (Reunión tranquila)</option>
+                    <option value="pile-driver">Pile Driver (Noche intensa)</option>
+                    <option value="zen-star">Zen Star (Tranquilidad total)</option>
                 </select>
-                <label for="message">Comentario(opcional):</label>
-                <textarea id="message" name="message"></textarea>
-                <button type="submit">Enviar</button>
+                <label for="message">Detalles del evento:</label>
+                <textarea id="message" name="message" placeholder="Explícanos el motivo de la fiesta, número de invitados, si quieres alguna bebida no catalogada..."></textarea>
+                <button type="submit">Solicitar reserva del local</button>
             </form>
         </div>
     </section>
     <hr>
     <footer>
-        <p>&copy; 2026 Página de Prueba. Todos los derechos reservados.</p>
+        <p>&copy; 2026 VA-11 HALL-A Bar Cybernetics. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>

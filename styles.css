@@ -7,17 +7,68 @@
 }
 
 body {
-    font-family: 'VA-11-HALL-A', sans-serif;
+  font-family: 'VA-11-HALL-A', sans-serif;
+  background-color: #000000;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #e03b82; 
+  text-shadow: 
+    0 0 3px rgba(154, 77, 190, 0.8),
+    0 0 8px rgba(0, 229, 255, 0.4),
+    0 0 15px rgba(255, 0, 170, 0.4);
+  margin: 0;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  animation: crt-flicker 0.15s infinite;
 }
 
-body {
-    background-color: #000000;
-    color: #ffffff;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+/* Capa superior para las líneas de escaneo (Scanlines) */
+body::after {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+              linear-gradient(90deg, rgba(255, 0, 0, 0.04), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.04));
+  background-size: 100% 4px, 6px 100%;
+  z-index: 99999;
+  pointer-events: none; 
+}
+
+/* Capa para el Barrido de pantalla */
+body::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0, 229, 255, 0.08) 10%, rgba(255,255,255,0) 11%);
+  background-size: 100% 200%; 
+  
+  opacity: 1; 
+  z-index: 99998;
+  pointer-events: none;
+  animation: crt-refresh 12s linear infinite;
+}
+
+/* Animaciones obligatorias */
+@keyframes crt-flicker {
+  0% { opacity: 0.993; }
+  50% { opacity: 1; }
+  100% { opacity: 0.997; }
+}
+
+@keyframes crt-refresh {
+  0% {
+    background-position: 0 -100vh;
+  }
+  100% {
+    background-position: 0 100vh;
+  }
 }
 
 hr {
@@ -47,9 +98,19 @@ nav ul li {
 }
 
 nav ul li a {
+    width: 100%;
+    height: 100%;
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li a:hover {
+    background-color: #ffffff;
+    color: #000000;
 }
 
 /* Drink section styles */

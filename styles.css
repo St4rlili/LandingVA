@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'VA-11-HALL-A';
+    src: url('fonts/VA.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'VA-11-HALL-A', sans-serif;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+hr {
+    width: 80%;
+    border: 1px solid #ffffff;
+    margin: 3vh 0 2vh 0;
+}
+
+/* Header styles */
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    width: 100px;
+    height: 30px;
+    border: 1px solid #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Drink section styles */
+
+.bebidas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+.bebida-card {
+    border: 10px double #ffffff;
+    padding: 95px;
+    text-align: center;
+}
+
+/* Contact section styles */
+
+.contacto-flex {
+    width: 65%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.item1 {
+    font-size: 2rem;
+    width: 50%;
+    height: 100%;
+    border: 1px solid #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item1 h3 {
+    height: 100%;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item2 {
+    font-size: 1rem;
+    width: 50%;
+    height: 100%;
+    border: 1px solid #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item2 form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 5vw;
+}
+
+.form-inline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.form-grupo input {
+    margin-top: 6px;
+}
+
+.item2 form input,
+.item2 form select,
+.item2 form textarea,
+.item2 form button {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 6px;
+}
+
+.item2 form textarea {
+    resize: none;
+    height: 80px;
+}
+
+/* Footer styles */
+

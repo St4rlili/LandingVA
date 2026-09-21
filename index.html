@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>VA-11-HALL-A</h1>
+        <h5>UN SABOR DEL MÁS ALLÁ</h5>
+        <nav>
+            <ul>
+                <li><a href="#inicio">INICIO</a></li>
+                <li><a href="#personal">PERSONAL</a></li>
+                <li><a href="#contacto">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+    <section>
+        <h2>Nuestras bebidas más populares</h2>
+        <div class="bebidas-grid">
+            <div class="bebida-card">
+                <h3>Bad Touch</h3>
+                <img src="drink1.jpg" alt="Drink 1">
+            </div>
+            <div class="bebida-card">
+                <h3>Bleeding Jane</h3>
+                <img src="drink2.jpg" alt="Drink 2">
+            </div>
+            <div class="bebida-card">
+                <h3>Brandtini</h3>
+                <img src="drink3.jpg" alt="Drink 3">
+            </div>
+            <div class="bebida-card">
+                <h3>Fluffy Dream</h3>
+                <img src="drink4.jpg" alt="Drink 4">
+            </div>
+            <div class="bebida-card">
+                <h3>Pile Driver</h3>
+                <img src="drink5.jpg" alt="Drink 5">
+            </div>
+            <div class="bebida-card">
+                <h3>Zen Star</h3>
+                <img src="drink6.jpg" alt="Drink 6">
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section class="contacto-flex">
+        <div class="itemform item1">
+            <h3>¿Quiere poder disfrutar de alguna de nuestras bebidas? ¡Haga su pedido ahora!</h3>
+        </div>
+        <div class="itemform item2">
+            <form>
+                <div class="form-inline">
+                    <div class="form-grupo">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name">
+                    </div>
+                    <div class="form-grupo">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                </div>
+                <label for="bebidas">Elige una bebida:</label>
+                <select id="bebidas" name="bebidas">
+                    <option value="bad-touch">Bad Touch</option>
+                    <option value="bleeding-jane">Bleeding Jane</option>
+                    <option value="brandtini">Brandtini</option>
+                    <option value="fluffy-dream">Fluffy Dream</option>
+                    <option value="pile-driver">Pile Driver</option>
+                    <option value="zen-star">Zen Star</option>
+                </select>
+                <label for="message">Comentario(opcional):</label>
+                <textarea id="message" name="message"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <hr>
+    <footer>
+        <p>&copy; 2026 Página de Prueba. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

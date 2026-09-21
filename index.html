@@ -9,43 +9,58 @@
 </head>
 <body class="crt">
     <header id="inicio">
-        <h1>VA-11-HALL-A</h1>
-        <h5>UN SABOR DEL MÁS ALLÁ</h5>
+        <h1>VA-11 HALL-A</h1>
+        <h4>UN SABOR DEL MÁS ALLÁ</h4>
         <nav>
             <ul>
-                <li><a href="#inicio">INICIO</a></li>
-                <li><a href="#personal">PERSONAL</a></li>
-                <li><a href="#contacto">ALQUILER</a></li>
+                <li><a href="#inicio" class="boton-cyberpunk">INICIO</a></li>
+                <li><a href="#personal" class="boton-cyberpunk">PERSONAL</a></li>
+                <li><a href="#contacto" class="boton-cyberpunk">ALQUILER</a></li>
             </ul>
         </nav>
     </header>
+    <hr>
+    <section class="bienvenida-cyberpunk">
+        <div>
+            <h2>BIEVENIDO A VA-11 HALL-A</h2>
+            <h3>Un rincón de calma en la tormenta de Glitch City</h3>
+            <p>
+                Ubicado en el subsuelo del centro de la ciudad, VA-11 HALL-A no es un bar corporativo ordinario. 
+                Aquí no solo servimos alcohol sintético de la más alta calidad mediante nanotecnología avanzada; 
+                ofrecemos un refugio para las almas errantes, lilims y humanos por igual, que buscan un respiro de la vorágine de la vida urbana.
+            </p>
+            <p class="lema">
+                <strong>"Es hora de mezclar bebidas y cambiar vidas."</strong>
+            </p>
+        </div>
+    </section>
     <hr>
     <section>
         <h2>Nuestras bebidas más populares</h2>
         <div class="bebidas-grid">
             <div class="bebida-card">
                 <h3>Bad Touch</h3>
-                <img src="drink1.jpg" alt="Drink 1">
+                <img src="img/Bad_Touch.png" alt="Drink 1">
             </div>
             <div class="bebida-card">
                 <h3>Bleeding Jane</h3>
-                <img src="drink2.jpg" alt="Drink 2">
+                <img src="img/Bleeding_Jane.png" alt="Drink 2">
             </div>
             <div class="bebida-card">
                 <h3>Brandtini</h3>
-                <img src="drink3.jpg" alt="Drink 3">
+                <img src="img/Brandtini.png" alt="Drink 3">
             </div>
             <div class="bebida-card">
                 <h3>Fluffy Dream</h3>
-                <img src="drink4.jpg" alt="Drink 4">
+                <img src="img/Fluffy_Dream.png" alt="Drink 4">
             </div>
             <div class="bebida-card">
                 <h3>Pile Driver</h3>
-                <img src="drink5.jpg" alt="Drink 5">
+                <img src="img/Pile_driver.png" alt="Drink 5">
             </div>
             <div class="bebida-card">
                 <h3>Zen Star</h3>
-                <img src="drink6.jpg" alt="Drink 6">
+                <img src="img/Zen_Star.png" alt="Drink 6">
             </div>
         </div>
     </section>
@@ -55,7 +70,7 @@
             <h3>¿Quieres el bar entero para ti? ¡Reserva el local para tu evento privado!</h3>
         </div>
         <div class="itemform item2">
-            <form>
+            <form action="reserva.html" method="POST">
                 <div class="form-inline">
                     <div class="form-grupo">
                         <label for="name">Nombre / Corporación:</label>
@@ -66,7 +81,7 @@
                         <input type="email" id="email" name="email" required placeholder="Para enviarte el presupuesto">
                     </div>
                 </div>
-                <label for="bebidas">Barra libre: Elige la bebida estrella de la noche:</label>
+                <label for="bebidas">Elige la bebida estrella de la noche:</label>
                 <select id="bebidas" name="bebidas" required>
                     <option value="">-- Selecciona el catálogo para el evento --</option>
                     <option value="bad-touch">Bad Touch (Gran ambiente)</option>
@@ -77,8 +92,8 @@
                     <option value="zen-star">Zen Star (Tranquilidad total)</option>
                 </select>
                 <label for="message">Detalles del evento:</label>
-                <textarea id="message" name="message" placeholder="Explícanos el motivo de la fiesta, número de invitados, si quieres alguna bebida no catalogada..."></textarea>
-                <button type="submit">Solicitar reserva del local</button>
+                <textarea id="message" name="message" placeholder="Explícanos el motivo de la fiesta, número de invitados, si quieres alguna bebida no catalogada..." required></textarea>
+                <button type="submit" href="reserva.html">Solicitar reserva del local</button>
             </form>
         </div>
     </section>

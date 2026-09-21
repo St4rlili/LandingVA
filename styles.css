@@ -8,7 +8,10 @@
 
 body {
   font-family: 'VA-11-HALL-A', sans-serif;
-  background-color: #000000;
+  background: 
+    radial-gradient(circle at 10% 10%, rgba(0, 77, 77, 0.4) 0%, transparent 40%),
+    radial-gradient(circle at 90% 90%, rgba(94, 0, 47, 0.5) 0%, transparent 45%),
+    linear-gradient(180deg, #030308 0%, #010103 100%);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -27,6 +30,7 @@ body {
 }
 
 /* Capa superior para las líneas de escaneo (Scanlines) */
+
 body::after {
   content: " ";
   display: block;
@@ -39,7 +43,8 @@ body::after {
   pointer-events: none; 
 }
 
-/* Capa para el Barrido de pantalla */
+/* Capa para el barrido de pantalla */
+
 body::before {
   content: " ";
   display: block;
@@ -56,6 +61,7 @@ body::before {
 }
 
 /* Animaciones obligatorias */
+
 @keyframes crt-flicker {
   0% { opacity: 0.993; }
   50% { opacity: 1; }
@@ -73,11 +79,25 @@ body::before {
 
 hr {
     width: 80%;
-    border: 1px solid #ffffff;
-    margin: 3vh 0 2vh 0;
+    border:3px dashed #ffffff;
+    margin: 4vh 0 2vh 0;
 }
 
-/* Header styles */
+header h1 {
+    font-size: 3.5rem;
+    margin: 2rem 0 0.1rem 0;
+}
+
+header h4 {
+    font-size: 1.25rem;
+    margin: 0.1rem 0 3rem 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Estilos para la lista de navegación */
 
 ul {
     list-style: none;
@@ -90,15 +110,14 @@ ul {
 
 nav ul li {
     width: 100px;
-    height: 30px;
-    border: 1px solid #ffffff;
+    height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-nav ul li a {
-    width: 100%;
+.boton-cyberpunk {
+    width: 7.5vw;
     height: 100%;
     color: #ffffff;
     text-decoration: none;
@@ -106,14 +125,53 @@ nav ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 3vh auto;
 }
 
-nav ul li a:hover {
+.boton-cyberpunk:hover {
     background-color: #ffffff;
     color: #000000;
 }
 
-/* Drink section styles */
+/* Estilos para la sección de bienvenida */
+
+.bienvenida-cyberpunk {
+    padding: 20px;
+    text-align: center;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+.bienvenida-cyberpunk h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #00e5ff;
+}
+
+.bienvenida-cyberpunk h3 {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: #ff007f;
+}
+
+.bienvenida-cyberpunk p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #ffffff;
+}
+
+.bienvenida-cyberpunk .lema {
+    font-size: 1.25rem;
+    font-style: italic;
+    line-height: 1.5;
+    margin-top: 40px;
+    color: #ffff00;
+    border-top: 2px dotted #ffff00;
+    border-bottom: 2px dotted #ffff00;
+    padding: 10px 0;
+}
+
+/* Sección de bebidas */
 
 .bebidas-grid {
     display: grid;
@@ -125,11 +183,17 @@ nav ul li a:hover {
 
 .bebida-card {
     border: 10px double #ffffff;
-    padding: 95px;
+    padding: 40px;
     text-align: center;
 }
 
-/* Contact section styles */
+.bebida-card img {
+    width: 100%;
+    max-width: 200px;
+    margin-top: 10px;
+}
+
+/* Sección de contacto */
 
 .contacto-flex {
     width: 65%;
@@ -141,6 +205,7 @@ nav ul li a:hover {
 }
 
 .item1 {
+    position: relative;
     font-size: 2rem;
     width: 50%;
     height: 100%;
@@ -148,9 +213,24 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+}
+
+.item1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/descarga.jpeg');
+    opacity: 0.25; 
+    z-index: 1;
 }
 
 .item1 h3 {
+    position: relative;
+    z-index: 2;
     height: 100%;
     width: 75%;
     display: flex;
@@ -159,7 +239,7 @@ nav ul li a:hover {
 }
 
 .item2 {
-    font-size: 1rem;
+    font-size: 1.15rem;
     width: 50%;
     height: 100%;
     border: 1px solid #ffffff;
@@ -178,7 +258,7 @@ nav ul li a:hover {
 
 .form-inline {
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: center;
     gap: 10px;
 }
@@ -204,5 +284,76 @@ nav ul li a:hover {
     height: 80px;
 }
 
-/* Footer styles */
+form button {
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
 
+/* Estilos para el pie de página */
+
+footer {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilos para reserva */
+.agradecimiento {
+    font-size: 3.5rem;
+}
+
+.mensaje {
+    font-size: 1.25rem;
+    color: #00e5ff;
+}
+
+.mensaje2 {
+    font-size: 1.25rem;
+    color: #00e5ff;
+}
+
+.boton-cyberpunk {
+    text-decoration: none;
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 10px;
+}
+
+.boton-cyberpunk:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.secreto {
+  position: absolute;
+  background: none;
+  border: none;
+  bottom: 0;
+  right: 0;
+}
+
+.secreto .img-activada {
+  display: none;
+}
+
+.secreto .img-desactivada {
+  opacity: 0.2;
+}
+
+.secreto:hover .img-desactivada {
+  display: none;
+}
+
+.secreto:hover .img-activada {
+  display: inline-block;
+}

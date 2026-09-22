@@ -1,3 +1,5 @@
+/* Fuente personalizada */
+
 @font-face {
     font-family: 'VA-11-HALL-A';
     src: url('fonts/VA.otf') format('opentype');
@@ -6,10 +8,12 @@
     font-display: swap;
 }
 
+/* Estilos generales y efectos varios (crt, gradientes para el fondo) */
+
 body {
   font-family: 'VA-11-HALL-A', sans-serif;
   background: 
-    radial-gradient(circle at 10% 10%, rgba(0, 77, 77, 0.4) 0%, transparent 40%),
+    radial-gradient(circle at 10% 10%, rgba(0, 77, 77, 0.4) 0%, transparent 50%),
     radial-gradient(circle at 90% 90%, rgba(94, 0, 47, 0.5) 0%, transparent 45%),
     linear-gradient(180deg, #030308 0%, #010103 100%);
   text-align: center;
@@ -20,7 +24,7 @@ body {
   color: #e03b82; 
   text-shadow: 
     0 0 3px rgba(154, 77, 190, 0.8),
-    0 0 8px rgba(0, 229, 255, 0.4),
+    0 0 8px rgba(0, 229, 255, 0.4), 
     0 0 15px rgba(255, 0, 170, 0.4);
   margin: 0;
   min-height: 100vh;
@@ -29,7 +33,7 @@ body {
   animation: crt-flicker 0.15s infinite;
 }
 
-/* Capa superior para las líneas de escaneo (Scanlines) */
+/* Capa superior para las líneas de escaneo */
 
 body::after {
   content: " ";
@@ -43,7 +47,7 @@ body::after {
   pointer-events: none; 
 }
 
-/* Capa para el barrido de pantalla */
+/* Capa para el barrido de pantalla (cada 12s) */
 
 body::before {
   content: " ";
@@ -60,7 +64,7 @@ body::before {
   animation: crt-refresh 12s linear infinite;
 }
 
-/* Animaciones obligatorias */
+/* Animaciones obligatorias para el funcionamiento de los efectos */
 
 @keyframes crt-flicker {
   0% { opacity: 0.993; }
@@ -76,6 +80,8 @@ body::before {
     background-position: 0 100vh;
   }
 }
+
+/* Cabecera */
 
 hr {
     width: 80%;
@@ -97,7 +103,7 @@ button {
     cursor: pointer;
 }
 
-/* Estilos para la lista de navegación */
+/* Lista de navegación */
 
 ul {
     list-style: none;
@@ -133,7 +139,7 @@ nav ul li {
     color: #000000;
 }
 
-/* Estilos para la sección de bienvenida */
+/* Sección de bienvenida */
 
 .bienvenida-cyberpunk {
     padding: 20px;
@@ -185,6 +191,12 @@ nav ul li {
     border: 10px double #ffffff;
     padding: 40px;
     text-align: center;
+    transition: transform 0.15s ease-in-out;
+    cursor: pointer;
+}
+
+.bebida-card:hover {
+  transform: scale(1.1);
 }
 
 .bebida-card img {
@@ -203,6 +215,8 @@ nav ul li {
     align-items: center;
     margin-top: 20px;
 }
+
+/* Parte izquierda */
 
 .item1 {
     position: relative;
@@ -237,6 +251,8 @@ nav ul li {
     align-items: center;
     justify-content: center;
 }
+
+/* Parte derecha */
 
 .item2 {
     font-size: 1.15rem;
@@ -299,14 +315,14 @@ form button:hover {
     color: #000000;
 }
 
-/* Estilos para el pie de página */
+/* Pie de página */
 
 footer {
     padding: 10px;
     text-align: center;
 }
 
-/* Estilos para reserva */
+/* Estilos únicos para reserva (reserva.html) */
 
 .agradecimiento {
     font-size: 3.5rem;
@@ -335,6 +351,8 @@ footer {
     color: #000000;
 }
 
+/* Botón escondido */
+
 #secreto {
   position: absolute;
   background: none;
@@ -342,6 +360,8 @@ footer {
   bottom: 0;
   right: 0;
 }
+
+/* Cambio de imagen y opacidad al hacer hover */
 
 #secreto .img-activada {
   display: none;
@@ -393,7 +413,7 @@ footer {
   flex-direction: column;
   align-items: flex-end;
   z-index: 100000; /* Por encima de la capa oscura */
-  transition: bottom 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  transition: bottom 1s cubic-bezier(0.175, 0.885, 0.32, 1.1);
 }
 
 /* Clase para deslizar la caja hacia arriba */

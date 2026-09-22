@@ -8,7 +8,7 @@ if (botonSecreto) {
     });
 }
 
-// Configuración
+// Configuración de sprites y pasos del tour
 
 const sprites = {
     saludando: 'img/saludando.png',

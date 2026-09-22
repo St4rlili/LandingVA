@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VA-11-HALL-A</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
 </head>
 <body class="crt">
-    <header id="inicio">
-        <h1>VA-11 HALL-A</h1>
+    <header>
+        <h1 id="inicio" >VA-11 HALL-A</h1>
         <h4>UN SABOR DEL MÁS ALLÁ</h4>
         <nav>
             <ul>
@@ -20,7 +19,7 @@
         </nav>
     </header>
     <hr>
-    <section class="bienvenida-cyberpunk">
+    <section id="bienvenida" class="bienvenida-cyberpunk">
         <div>
             <h2>BIEVENIDO A VA-11 HALL-A</h2>
             <h3>Un rincón de calma en la tormenta de Glitch City</h3>
@@ -35,7 +34,7 @@
         </div>
     </section>
     <hr>
-    <section>
+    <section id="bebidas">
         <h2>Nuestras bebidas más populares</h2>
         <div class="bebidas-grid">
             <div class="bebida-card">
@@ -98,8 +97,24 @@
         </div>
     </section>
     <hr>
-    <footer>
+    <footer id="footer">
         <p>&copy; 2026 VA-11 HALL-A Bar Cybernetics. Todos los derechos reservados.</p>
     </footer>
+
+    <!--  SECRETO -->
+    <div id="custom-overlay" class="driver-overlay"></div>
+
+    <div id="dorothy-vn-container">
+        <div id="dorothy-sprite" class="vn-sprite"></div>
+        <div class="vn-dialog-box">
+            <div class="vn-name">Dorothy Haze</div>
+            <div class="vn-content-row">
+                <p id="vn-text-box" class="vn-text">Inicializando comunicación...</p>
+                <button id="vn-btn-avanzar" class="vn-next-btn">Siguiente</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

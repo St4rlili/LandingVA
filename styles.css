@@ -307,6 +307,7 @@ footer {
 }
 
 /* Estilos para reserva */
+
 .agradecimiento {
     font-size: 3.5rem;
 }
@@ -334,7 +335,7 @@ footer {
     color: #000000;
 }
 
-.secreto {
+#secreto {
   position: absolute;
   background: none;
   border: none;
@@ -342,18 +343,134 @@ footer {
   right: 0;
 }
 
-.secreto .img-activada {
+#secreto .img-activada {
   display: none;
 }
 
-.secreto .img-desactivada {
+#secreto .img-desactivada {
   opacity: 0.2;
 }
 
-.secreto:hover .img-desactivada {
+#secreto:hover .img-desactivada {
   display: none;
 }
 
-.secreto:hover .img-activada {
+#secreto:hover .img-activada {
   display: inline-block;
+}
+
+/* Capa del fondo oscuro */
+
+.driver-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000000;
+  opacity: 0;
+  z-index: 99998;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+/* Elemento que se resalta con el tour */
+
+.driver-highlighted-element {
+  position: relative !important;
+  z-index: 99999 !important;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+}
+
+/* Interfaz estilo VN */
+
+#dorothy-vn-container {
+  position: fixed;
+  bottom: -450px; /* Escondida por debajo */
+  right: 5%;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 100000; /* Por encima de la capa oscura */
+  transition: bottom 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+}
+
+/* Clase para deslizar la caja hacia arriba */
+
+#dorothy-vn-container.active {
+  bottom: 25px;
+}
+
+/* Sprite de Dorothy */
+
+.vn-sprite {
+  width: 160px;
+  height: 170px;
+  margin-right: 40px;
+  z-index: 2;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+/* Caja de diálogo */
+
+.vn-dialog-box {
+  width: 100%;
+  background-color: #07070a;
+  border: 3px dashed #ff007f;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 0 25px rgba(255, 0, 127, 0.3);
+}
+
+/* Nombre del personaje */
+
+.vn-name {
+  color: #00ffff;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Contenido de la caja (texto y botón) */
+
+.vn-content-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+/* Texto del contenedor */
+
+.vn-text {
+  color: #e2e2ff;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
+}
+
+/* Botón del contenedor */
+
+.vn-next-btn {
+  background-color: #00ffff;
+  color: #000000;
+  border: none;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.vn-next-btn:hover {
+  background-color: #ffffff;
 }

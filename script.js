@@ -20,7 +20,7 @@ const sprites = {
 const pasos = [
     {
         elemento: '#inicio',
-        texto: '¡Bienvenido a VA-11 HALL-A! Encantada de conocerte soy Dorothy Haze y seré la encargada de hacer el tour por la web que Pedro ha diseñado inspirandose en mi bar favorito.',
+        texto: '¡Bienvenido a VA-11 HALL-A! Encantada de conocerte soy Dorothy Haze y seré la encargada de hacer el tour por la web que Pedro ha diseñado inspirándose en mi bar favorito.',
         sprite: sprites.saludando
     },
     {
@@ -50,7 +50,7 @@ const pasos = [
     },
     {
         elemento: '',
-        texto: 'Bueno creo que eso ha sido todo, si a Pedro le apetece trabajar más conmigo nos volveremos a ver en sus próximos proyectos. Y en el caso contrario...',
+        texto: 'Bueno creo que eso ha sido todo, si a Pedro le apetece trabajar más conmigo nos volveremos a ver en sus próximos proyectos. Y en caso contrario...',
         sprite: sprites.alegre
     },
     {

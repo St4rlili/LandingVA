@@ -84,273 +84,287 @@ body::before {
 /* Cabecera */
 
 hr {
-    width: 80%;
-    border:3px dashed #ffffff;
-    margin: 4vh 0 2vh 0;
+  width: 80%;
+  border:3px dashed #ffffff;
+  margin: 4vh 0 2vh 0;
 }
 
 header h1 {
-    font-size: 3.5rem;
-    margin: 2rem 0 0.1rem 0;
+  font-size: 3.5rem;
+  margin: 2rem 0 0.1rem 0;
 }
 
 header h4 {
-    font-size: 1.25rem;
-    margin: 0.1rem 0 3rem 0;
+  font-size: 1.25rem;
+  margin: 0.1rem 0 3rem 0;
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 /* Lista de navegación */
 
 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 nav ul li {
-    width: 100px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .boton-cyberpunk {
-    width: 7.5vw;
-    height: 100%;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 3vh auto;
+  width: 7.5vw;
+  height: 100%;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3vh auto;
 }
 
 .boton-cyberpunk:hover {
-    background-color: #ffffff;
-    color: #000000;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 /* Sección de bienvenida */
 
 .bienvenida-cyberpunk {
-    padding: 20px;
-    text-align: center;
-    max-width: 60%;
-    margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  max-width: 60%;
+  margin: 0 auto;
 }
 
 .bienvenida-cyberpunk h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: #00e5ff;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #00e5ff;
 }
 
 .bienvenida-cyberpunk h3 {
-    font-size: 1.3rem;
-    line-height: 1.5;
-    color: #ff007f;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: #ff007f;
 }
 
 .bienvenida-cyberpunk p {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    color: #ffffff;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #ffffff;
 }
 
 .bienvenida-cyberpunk .lema {
-    font-size: 1.25rem;
-    font-style: italic;
-    line-height: 1.5;
-    margin-top: 40px;
-    color: #ffff00;
-    border-top: 2px dotted #ffff00;
-    border-bottom: 2px dotted #ffff00;
-    padding: 10px 0;
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 1.5;
+  margin-top: 40px;
+  color: #ffff00;
+  border-top: 2px dotted #ffff00;
+  border-bottom: 2px dotted #ffff00;
+  padding: 10px 0;
 }
 
 /* Sección de bebidas */
 
+#bebidas h2 {
+padding-bottom: 2vh;
+}
+
 .bebidas-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
 }
 
 .bebida-card {
-    border: 10px double #ffffff;
-    padding: 40px;
-    text-align: center;
-    transition: transform 0.15s ease-in-out;
-    cursor: pointer;
+  border: 10px double #ffffff;
+  padding: 40px;
+  text-align: center;
+  transition: transform 0.15s ease-in-out;
+  cursor: pointer;
 }
 
 .bebida-card:hover {
-  transform: scale(1.05);
+transform: scale(1.05);
 }
 
 .bebida-card img {
-    width: 100%;
-    max-width: 200px;
-    margin-top: 10px;
+  width: 100%;
+  max-width: 200px;
+  margin-top: 10px;
 }
 
 /* Sección de contacto */
 
 .contacto-flex {
-    width: 65%;
-    height: 35vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+  width: 65%;
+  min-height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 20px auto 0 auto;
 }
 
 /* Parte izquierda */
 
 .item1 {
-    position: relative;
-    font-size: 2rem;
-    width: 50%;
-    height: 100%;
-    border: 1px solid #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+  position: relative;
+  font-size: 2rem;
+  width: 50%;
+  border: 1px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .item1::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('img/descarga.jpeg');
-    opacity: 0.25; 
-    z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('img/descarga.jpeg');
+  background-size: cover;
+  opacity: 0.25; 
+  z-index: 1;
 }
 
 .item1 h3 {
-    position: relative;
-    z-index: 2;
-    height: 100%;
-    width: 75%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Parte derecha */
 
 .item2 {
-    font-size: 1.15rem;
-    width: 50%;
-    height: 100%;
-    border: 1px solid #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  font-size: 1.15rem;
+  width: 50%;
+  border: 1px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 .item2 form {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-    margin: 5vw;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 30px;
+  box-sizing: border-box;
 }
 
 .form-inline {
-    display: flex;
-    align-items: end;
-    justify-content: center;
-    gap: 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 15px;
+  width: 100%;
+}
+
+.form-inline .form-grupo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-grupo input {
-    margin-top: 6px;
+  margin-top: 6px;
 }
 
 .item2 form input,
 .item2 form select,
 .item2 form textarea,
 .item2 form button {
-    width: 100%;
-    box-sizing: border-box;
-    background-color: #000000;
-    color: #ffffff;
-    border: 1px solid #ffffff;
-    padding: 6px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 6px;
 }
 
 .item2 form textarea {
-    resize: none;
-    height: 80px;
+  resize: none;
+  height: 80px;
 }
 
 form button {
-    width: 100%;
-    height: 100%;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 form button:hover {
-    background-color: #ffffff;
-    color: #000000;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 /* Pie de página */
 
 footer {
-    padding: 10px;
-    text-align: center;
+  padding: 10px;
+  text-align: center;
 }
 
 /* Estilos únicos para reserva (reserva.html) */
 
 .agradecimiento {
-    font-size: 3.5rem;
+  font-size: 3.5rem;
 }
 
 .mensaje {
-    font-size: 1.25rem;
-    color: #00e5ff;
+  font-size: 1.25rem;
+  color: #00e5ff;
 }
 
 .mensaje2 {
-    font-size: 1.25rem;
-    color: #00e5ff;
+  font-size: 1.25rem;
+  color: #00e5ff;
 }
 
 .boton-cyberpunk {
-    text-decoration: none;
-    background-color: #000000;
-    color: #ffffff;
-    border: 1px solid #ffffff;
-    padding: 10px;
+  text-decoration: none;
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 10px;
 }
 
 .boton-cyberpunk:hover {
-    background-color: #ffffff;
-    color: #000000;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 /* Media queries */
@@ -358,11 +372,11 @@ footer {
 @media (max-width:1000px) {
 
   header h1 {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
   }
 
   header h4 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .boton-cyberpunk {
@@ -371,7 +385,7 @@ footer {
   }
   
   a {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   #bienvenida {
@@ -379,19 +393,19 @@ footer {
   }
 
   #bienvenida h2 {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
   }
 
   #bienvenida h3 {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
   }
 
   #bienvenida p {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
 
   #bebidas h2 {
-    font-size: 5vw;
+    font-size: 1.5rem;
   }
 
   .bebidas-grid {
@@ -425,17 +439,26 @@ footer {
     margin-top: 10px;
   }
 
-  .item1 {
-    font-size: 0.9rem;
+  .contacto-flex {
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+    margin-top: 2vh;
   }
 
-  .contacto-flex {
-    height: 25vh;
+  .item1, .item2 {
+    width: 100%;
+    height: auto;
+  }
+
+  .item1 {
+    font-size: 1.5rem;
+    padding: 30px 20px;
   }
 
   .item2 {
-    font-size: 10px;
-    overflow: auto;
+    font-size: 1rem;
+    overflow: visible;
   }
 
   .item2 form {
@@ -443,10 +466,9 @@ footer {
   }
 
   .form-inline {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 5px;
+    align-items: stretch;
+    gap: 10px;
   }
 
   .item2 form input,
@@ -457,18 +479,11 @@ footer {
   }
 
   #message {
-    height: 3vh;
-  }
-
-  input::placeholder,
-  #message::placeholder,
-  select#bebidas,
-  form button {
-    font-size: 8px;
+    height: 100px;
   }
 
   footer {
-    font-size: 8px;
+    font-size: 12px;
   }
 }
 

@@ -19,44 +19,54 @@ const sprites = {
 
 const pasos = [
     {
-        elemento: '#inicio',
-        texto: '¡Bienvenido a VA-11 HALL-A! Encantada de conocerte soy Dorothy Haze y seré la encargada de hacer el tour por la web que Pedro ha diseñado inspirándose en mi bar favorito.',
-        sprite: sprites.saludando
+      elemento: '#inicio',
+      texto: '¡Bienvenido a VA-11 HALL-A! Encantada de conocerte soy Dorothy Haze y seré la encargada de hacer el tour por la web que Pedro ha diseñado inspirándose en mi bar favorito.',
+      sprite: sprites.saludando
     },
     {
-        elemento: '#inicio',
-        texto: 'El porqué de un botón para hacer un tour en una página así y que además ya debes haber utilizado previamente para desbloquearlo es un misterio, así que mejor pregúntale a el.',
-        sprite: sprites.enfadada
+      elemento: '',
+      texto: 'El porqué de un botón para hacer un tour en una página así y que además ya debes haber utilizado previamente para desbloquearlo es un misterio, así que mejor pregúntale a el.',
+      sprite: sprites.enfadada
     },
     {
-        elemento: '#bienvenida',
-        texto: 'En Glitch City no hay ningún lugar dónde tomar un buen trago ¿verdad? Pues estás de suerte porque VA-11 HALL-A ofrece justo lo que buscas, un buen ambiente, servicio excelente y bebidas de todo tipo.',
-        sprite: sprites.alegre
+      elemento: '#bienvenida',
+      texto: 'En Glitch City no hay ningún lugar dónde tomar un buen trago ¿verdad? Pues estás de suerte porque VA-11 HALL-A ofrece justo lo que buscas, un buen ambiente, servicio excelente y bebidas de todo tipo.',
+      sprite: sprites.alegre
     },
     {
-        elemento: '#bebidas',
-        texto: 'Explora nuestra selección de bebidas más populares. Desde cócteles clásicos hasta creaciones exclusivas, tenemos algo para todos los gustos y la bartender es la mar de maja.',
-        sprite: sprites.alegre
+      elemento: '#bebidas',
+      texto: 'Explora nuestra selección de bebidas más populares. Desde cócteles clásicos hasta creaciones exclusivas, tenemos algo para todos los gustos y una bartender que es la mar de maja.',
+      sprite: sprites.alegre
     },
     {
-        elemento: '#contacto',
-        texto: '¿Te gustaría alquilar nuestro espacio para un evento especial? Podemos contactar a través de este sencillo formulario.',
-        sprite: sprites.alegre
+      elemento: '#contacto',
+      texto: '¿Te gustaría alquilar nuestro espacio para un evento especial? Podemos contactar a través de este sencillo formulario.',
+      sprite: sprites.alegre
     },
     {
-        elemento: '#contacto',
-        texto: 'Úsalo mucho, así podrás volver a ejecutar el tour y hablar conmigo de nuevo. Aunque técnicamente no estamos hablando y de hecho mis líneas ya están escritas, pero algo de compañía nunca está mal.',
-        sprite: sprites.alegre
+      elemento: '#contacto',
+      texto: 'Úsalo mucho, así podrás volver a ejecutar el tour y hablar conmigo de nuevo. Aunque técnicamente no estamos hablando y de hecho mis líneas ya están escritas, pero algo de compañía nunca está mal.',
+      sprite: sprites.alegre
     },
     {
-        elemento: '',
-        texto: 'Bueno creo que eso ha sido todo, si a Pedro le apetece trabajar más conmigo nos volveremos a ver en sus próximos proyectos. Y en caso contrario...',
-        sprite: sprites.alegre
+      elemento: '',
+      texto: 'Bueno creo que eso ha sido todo, si a Pedro le apetece trabajar más conmigo nos volveremos a ver en sus próximos proyectos. Y en caso contrario...',
+      sprite: sprites.alegre
     },
     {
-        elemento: '',
-        texto: '...',
-        sprite: sprites.enfadada
+      elemento: '',
+      texto: '...',
+      sprite: sprites.enfadada
+    },
+    {
+      elemento: '',
+      texto: '¡No quiero que me deje tirada para siempre!',
+      sprite: sprites.triste
+    },
+    {
+      elemento: '',
+      texto: 'En fin... Perdóname por eso.',
+      sprite: sprites.enfadada
     },
     {
         elemento: '',

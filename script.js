@@ -1,3 +1,17 @@
+// Formulario
+
+const formulario = document.getElementById('form'); 
+
+if (formulario) {
+    formulario.addEventListener('submit', function() {
+        const nombre = document.getElementById('name')?.value || '???';
+        const email = document.getElementById('email')?.value || '???';
+
+        sessionStorage.setItem('vn_nombre', nombre);
+        sessionStorage.setItem('vn_email', email);
+    });
+}
+
 // Redirección
 
 const botonSecreto = document.getElementById('secreto');
@@ -26,6 +40,21 @@ const pasos = [
     {
       elemento: '',
       texto: 'El porqué de un botón para hacer un tour en una página así y que además ya debes haber utilizado previamente para desbloquearlo es un misterio, así que mejor pregúntale a el.',
+      sprite: sprites.enfadada
+    },
+    {
+      elemento: '',
+      texto: 'El nombre que has puesto en el formulario es algo raro... {{nombre}}... Vaya nombre más extraño, supongo que es uno de esos nombres que se han perdido con el tiempo...',
+      sprite: sprites.alegre
+    },
+    {
+      elemento: '',
+      texto: 'No se puede decir lo mismo de "{{email}}", hahaha parece el correo de un adolescente sin vergüenza. ',
+      sprite: sprites.alegre
+    },
+      {
+      elemento: '',
+      texto: 'En fin, a lo que vamos...',
       sprite: sprites.enfadada
     },
     {
@@ -161,22 +190,31 @@ if (btnAvanzar) {
 window.addEventListener('DOMContentLoaded', () => {
   const urlParams = new URLSearchParams(window.location.search);
   
-  // Si recibe el parámetro startTour (se activa con el botón en la otra web a través de una redirección) empieza el tour desde 0.
-
   if (urlParams.get('startTour') === 'true') {
     pasoActual = 0;
     
-    // Si existen el overlay y el contenedor se desactivan los clicks en el resto de la página (fuera del overlay y el contendor) se le baja la opacidad y le da la clase active al contenedor
+    // Recuperamos los datos que guardamos en la página del formulario
+
+    const nombreUsuario = sessionStorage.getItem('vn_nombre') || '???';
+    const emailUsuario = sessionStorage.getItem('vn_email') || '???';
+
+    // Reemplazamos los placeholders {{nombre}} y {{email}} en los pasos
+    pasos.forEach(paso => {
+        paso.texto = paso.texto
+            .replace('{{nombre}}', nombreUsuario)
+            .replace('{{email}}', emailUsuario);
+    });
+
+    // Limpiamos la memoria para que quede vacío para la próxima vez
+
+    sessionStorage.removeItem('vn_nombre');
+    sessionStorage.removeItem('vn_email');
 
     if (overlay && contenedor) {
       overlay.style.pointerEvents = "auto";
       overlay.style.opacity = "0.7";
-      
       contenedor.classList.add('active');
-      
-      setTimeout(() => {
-        ejecutarPaso();
-      }, 400);
+      setTimeout(() => { ejecutarPaso(); }, 400);
     }
   }
 });
